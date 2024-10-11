@@ -1,4 +1,4 @@
-package com.kpjavaspringboot.KPJavaSpringBoot;
+package com.kpjavaspringboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
