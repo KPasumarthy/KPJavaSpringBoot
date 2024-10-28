@@ -11,13 +11,10 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class KPJavaSpringBootApplication {
 
-	@Value("${app.title}") // Injecting the value of app.greeting from application.properties
-	private static String greeting;
-
 
 	public static void main(String[] args) {
 		SpringApplication.run(KPJavaSpringBootApplication.class, args);
-		System.out.println("KP : KPJavaSpringBootApplication : main() : " +  greeting);
+		System.out.println("KP : KPJavaSpringBootApplication : main() ");
 	}
 
 }

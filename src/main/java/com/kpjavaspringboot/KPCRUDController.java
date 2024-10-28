@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class CRUDController {
+public class KPCRUDController {
 
     @Value("${app.title}") // Injecting the value of app.greeting from application.properties
     private String greeting;
 
     @GetMapping("/greet")
     public String greet() {
-        System.out.println("KP : KPJavaSpringBootApplication : CRUDController : greet()");
+        System.out.println("KP : KPJavaSpringBootApplication : KPCRUDController : greet()");
         return greeting; // Return the value of app.greeting
     }
 }
