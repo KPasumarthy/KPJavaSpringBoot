@@ -8,7 +8,11 @@ public class KPRemoveDuplicates {
         System.out.println("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : main()");
 
         //String input = new String("hi across beeeater Bookkeeper");
-        String[] input = {"hi", "across", "beeeater", "Bookkeeper"};
+        //String[] input = {"hi", "across", "beeeater", "Bookkeeper"};
+        String[] input = {"unsuccessfully", "bypass"};
+        //String[] output = {};
+        int n = 0;
+        String[] output = new String[input.length];
 
         for (String tmpWord : input){
 
@@ -26,9 +30,16 @@ public class KPRemoveDuplicates {
                 prevChar = tmpChar;
 
             }
-
-            System.out.println("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : newWord : " + newWord);
+            output[n] = newWord ;
+            n++;
+            System.out.println("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : n = " + n + " newWord : " + newWord);
         }
+
+        System.out.print("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : Output : [" );
+        for (String newWord : output){
+            System.out.print( " " + newWord);
+        }
+        System.out.println(" ] " );
 
         //        Interview Question : Remove Duplicate Characters
         //        Duplicate Characters
