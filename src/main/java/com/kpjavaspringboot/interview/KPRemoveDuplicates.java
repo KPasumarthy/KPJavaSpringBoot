@@ -24,32 +24,32 @@ public class KPRemoveDuplicates {
         int n = 0;
         String[] output = new String[input.length];
 
-        for (String tmpWord : input){
+        for (String tmpWord : input) {
 
             System.out.println("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : tmpWord : " + tmpWord);
             String strArray[] = tmpWord.split("");
             String prevChar = "";
             String newWord = "";
-            for (String tmpChar: strArray){
+            for (String tmpChar : strArray) {
 
                 //System.out.println("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : tmpChar : " + tmpChar);
-               if(  !tmpChar.equals(prevChar) ) {
+                if (!tmpChar.equals(prevChar)) {
                     System.out.println("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : tmpChar : " + tmpChar);
-                   newWord = newWord + tmpChar;
+                    newWord = newWord + tmpChar;
                 }
                 prevChar = tmpChar;
 
             }
-            output[n] = newWord ;
+            output[n] = newWord;
             n++;
             System.out.println("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : n = " + n + " newWord : " + newWord);
         }
 
-        System.out.print("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : Output : [" );
-        for (String newWord : output){
-            System.out.print( " " + newWord);
+        System.out.print("KP : KPMain - com.kpjavaspringboot : KPRemoveDuplicates : Output : [");
+        for (String newWord : output) {
+            System.out.print(" " + newWord);
         }
-        System.out.println(" ] " );
+        System.out.println(" ] ");
 
         //        Interview Question : Remove Duplicate Characters
         //        Duplicate Characters
