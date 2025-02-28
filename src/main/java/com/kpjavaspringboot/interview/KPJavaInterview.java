@@ -48,7 +48,43 @@ public class KPJavaInterview {
 		int[] A = { 1, 3, 2, 4, 2, 2, 4, 5, 6, 7, 2, 3, 1, 1, 3, 3, 2 };
 		findANumber(2, A);
 		// Java 8 : Find a Number in an Array
+
+		//Java 8 : Get square of no -3,-2,-1,0,4,5,6 in sorted order
+		getSquareOfNumbers();
+		//Java 8 : Get square of no -3,-2,-1,0,4,5,6 in sorted order
+
 	}
+
+	/*******************************************
+	 * Java 8 : Get square of no -3,-2,-1,0,4,5,6 in sorted order
+	 ********************************************/
+	public static void getSquareOfNumbers() {
+		///KP : Write program to get square of no -3,-2,-1,0,4,5,6 in sorted order
+		int[] Input = {-3, -2, -1, 0, 4, 5, 6};
+		int n = Input.length;
+
+		int[] Output = new int[n - 1];
+
+
+		System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  n = " + n);
+
+		for (int i = 0; i < n - 1; i++) {
+			int tmp = Input[i];
+			System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  tmp  = " + tmp + " (tmp * tmp) = " + (tmp * tmp));
+			Output[i] = (tmp * tmp);
+		}
+
+		//Arrays.stream(Output).sorted();
+		Arrays.sort(Output);
+		//System.out.printf("\t Sorted Array Output[] : %s \n", Arrays.toString(Output));
+
+		System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  Output = " + Arrays.toString(Output));
+
+	}
+
+	/*******************************************
+	 * Java 8 : Get square of no -3,-2,-1,0,4,5,6 in sorted order
+	 ********************************************/
 
 	/*******************************************
 	 * Java 8 : Find a Number in an Array

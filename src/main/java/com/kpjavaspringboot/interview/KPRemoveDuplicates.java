@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 public class KPRemoveDuplicates {
 
-    private static Logger logger = LoggerFactory.getLogger(KPJavaSpringBootApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(KPJavaSpringBootApplication.class);
 
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class KPRemoveDuplicates {
 
         //String input = new String("hi across beeeater Bookkeeper");
         //String[] input = {"hi", "across", "beeeater", "Bookkeeper"};
-        String[] input = {"unsuccessfully", "bypass"};
+        String[] input = {"unsuccessfully", "bypass", "malladi"};
         //String[] output = {};
         int n = 0;
         String[] output = new String[input.length];
