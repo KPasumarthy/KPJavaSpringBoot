@@ -70,14 +70,11 @@ public class KPJavaInterview {
 
 		for (int i = 0; i < n - 1; i++) {
 			int tmp = Input[i];
-			System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  tmp  = " + tmp + " (tmp * tmp) = " + (tmp * tmp));
+			System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  tmp  = " + tmp + " (tmp * tmp) = " + (tmp * tmp) + " (int) (Math.pow(tmp, 2); " + (int) (Math.pow(tmp, 2)));
 			Output[i] = (tmp * tmp);
 		}
 
-		//Arrays.stream(Output).sorted();
 		Arrays.sort(Output);
-		//System.out.printf("\t Sorted Array Output[] : %s \n", Arrays.toString(Output));
-
 		System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  Output = " + Arrays.toString(Output));
 
 	}
