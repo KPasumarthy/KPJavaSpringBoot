@@ -17,6 +17,10 @@ public class CRUDController {
     @Value("${app.title}") // Injecting the value of app.greeting from application.properties
     private String greeting;
 
+    public CRUDController(String greeting) {
+        this.greeting = greeting;
+    }
+
     @GetMapping("/CRUD/greet")
     public String greet() {
         System.out.println("KP : KPJavaSpringBootApplication : CRUDController : greet()");
