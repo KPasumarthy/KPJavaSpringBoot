@@ -13,6 +13,9 @@ public class KPJavaInterview {
 
 		//kptcsMinCoin.minCoin();
 
+		//Coding Challenge
+
+
 
 		//		////Java Strings  : Immutable
 		//		String s1 = "Scott";
@@ -36,21 +39,21 @@ public class KPJavaInterview {
 		// addDigits(3415);
 
 		// Java 8 : All Permutations of a Java String
-		String str = "ABCDEF";
-		allStringPermute(str);
+		//String str = "ABCDEF";
+		//allStringPermute(str);
 		// Java 8 : All Permutations of a Java String
 
 		// Java 8 : Print Even & Odd Numbers
-		printOddsNEvens(0, 100);
+		//printOddsNEvens(0, 100);
 		// Java 8 : Print Even & Odd Numbers
 
 		// Java 8 : Find a Number in an Array
-		int[] A = { 1, 3, 2, 4, 2, 2, 4, 5, 6, 7, 2, 3, 1, 1, 3, 3, 2 };
-		findANumber(2, A);
+		//int[] A = { 1, 3, 2, 4, 2, 2, 4, 5, 6, 7, 2, 3, 1, 1, 3, 3, 2 };
+		//findANumber(2, A);
 		// Java 8 : Find a Number in an Array
 
 		//Java 8 : Get square of no -3,-2,-1,0,4,5,6 in sorted order
-		getSquareOfNumbers();
+		//getSquareOfNumbers();
 		//Java 8 : Get square of no -3,-2,-1,0,4,5,6 in sorted order
 
 	}
