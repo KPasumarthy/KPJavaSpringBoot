@@ -86,13 +86,13 @@ public class KPJavaSynechron {
         //
 
         ///System.out.println("KP : KPJavaSynechron : KPJavaScheduler : ScheduledExecutorService : " + LocalDateTime.now());
-        //logger.info("KP : KPJavaSynechron : KPJavaScheduler ScheduledExecutorService : " + LocalDateTime.now());
-        //KPJavaScheduler.beepForAnHour();
+        logger.info("KP : KPJavaSynechron : KPJavaScheduler ScheduledExecutorService : " + LocalDateTime.now());
+        KPJavaScheduler.beepForAnHour();
 
         ///System.out.println("KP : KPJavaSynechron : KPAsyncConfig :  " + LocalDateTime.now());
-        //logger.info("KP : KPJavaSynechron : KPAsyncConfig  : " + LocalDateTime.now());
-        //KPAsyncConfig  kpMyAsyncConfig = new KPAsyncConfig();
-        //Executor executor =   kpMyAsyncConfig.getAsyncExecutor();;
+        logger.info("KP : KPJavaSynechron : KPAsyncConfig  : " + LocalDateTime.now());
+        KPAsyncConfig  kpMyAsyncConfig = new KPAsyncConfig();
+        Executor executor =   kpMyAsyncConfig.getAsyncExecutor();;
 
         ///System.out.println("KP : KPJavaSynechron : KPJavaStockPrice : ScheduledExecutorService : " + LocalDateTime.now());
         logger.info("KP : KPJavaSynechron : KPJavaStockPrice ScheduledExecutorService : " + LocalDateTime.now());
