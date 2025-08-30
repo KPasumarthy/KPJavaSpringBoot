@@ -123,9 +123,7 @@ public class KPJavaSynechron {
     }
 
     public static class MarketDataAggregator {
-        //HashMap hm = new HashMap< String tag, double price>;
-        //HashMap<String, Double> symbol = new HashMap<String, Double>();
-        //HashMap<String, Instrument> symbol = new HashMap<String, Instrument>();
+
         Instrument instrument = new Instrument("AAPL", 10000001L, 145.67);
 
         public Instrument onPriceUpdate(String id, long timestamp, double price) {
@@ -169,14 +167,6 @@ public class KPJavaSynechron {
         private static int period = 7;
 
 
-        //        public static void main(String[] args) {
-        //            ///System.out.println("KP : KPJavaStockPrice : StockPriceExecutorServiceThread ");
-        //            logger.info("KP : KPJavaStockPrice StockPriceExecutorServiceThread ");
-        //
-        //            beepForAnHour();
-        //        }
-
-
         private static final ScheduledExecutorService stockPriceExecutorServiceThread = Executors.newScheduledThreadPool(corePoolSize);
         // KPJavaStockPrice created with 3 threads
 
@@ -184,9 +174,6 @@ public class KPJavaSynechron {
         public static void executeStockPriceForAnHour() {
 
 
-//            MarketDataAggregator aggregator = new MarketDataAggregator();
-//            Instrument instrument = aggregator.onPriceUpdate("AAPL", 10000001L, 150.0);
-//
             final Runnable displayStockPrice01L = new Runnable() {
 
 
@@ -231,7 +218,6 @@ public class KPJavaSynechron {
 
             }; // Creating a new runnable task which will be passed as an argument to scheduler
 
-
             final Runnable displayStockPrice03L = new Runnable() {
 
 
@@ -254,7 +240,8 @@ public class KPJavaSynechron {
 
             }; // Creating a new runnable task which will be passed as an argument to scheduler
 
-
+            ScheduledFuture displayHandle4StockPrice = stockPriceExecutorServiceThread.schedule(displayStockPrice01L, initialDelay, TimeUnit.SECONDS);
+            // Creates and executes a ScheduledFuture that becomes enabled after 5 seconds and gets executed with fixed rate of 5 seconds
 
             ScheduledFuture displayHandle4StockPriceAtFixedRate = stockPriceExecutorServiceThread.scheduleAtFixedRate(displayStockPrice02L, initialDelay, period, TimeUnit.SECONDS);
             // Creates and executes a ScheduledFuture that becomes enabled after 5 seconds and gets executed with fixed rate of 5 seconds
@@ -262,29 +249,23 @@ public class KPJavaSynechron {
             ScheduledFuture displayHandle4StockPriceAtFixedDelay = stockPriceExecutorServiceThread.scheduleWithFixedDelay(displayStockPrice03L, initialDelay, period, TimeUnit.SECONDS);
             // Creates and executes a ScheduledFuture that becomes enabled after 5 seconds and gets executed with fixed delay of 5 seconds
 
+
             stockPriceExecutorServiceThread.schedule(new Runnable() {
-                //                MarketDataAggregator aggregator = new MarketDataAggregator();
-//                Instrument instrument = aggregator.onPriceUpdate("AAPL", 10000003L, 151.0);
-//
                 public void run() {
-//                     System.out.println("KP : KPJavaStockPrice : instrument - id : " + instrument.id +
-//                                    " timestamp : " + instrument.timestamp +
-//                                    " price : " + instrument.price +
-//                                    " LocalDateTime :  "  + LocalDateTime.now());
+                    displayHandle4StockPrice.cancel(true);
+                } // Attempts to cancel execution of task displayHandle4StockPriceAtFixedRate after one hour
+            }, 60 * 60, TimeUnit.SECONDS); // Creates and executes a one-shot action that becomes enabled after the given delay.
+
+            stockPriceExecutorServiceThread.schedule(new Runnable() {
+           public void run() {
+
                     displayHandle4StockPriceAtFixedRate.cancel(true);
                 } // Attempts to cancel execution of task displayHandle4StockPriceAtFixedRate after one hour
             }, 60 * 60, TimeUnit.SECONDS); // Creates and executes a one-shot action that becomes enabled after the given delay.
 
             stockPriceExecutorServiceThread.schedule(new Runnable() {
-                //                MarketDataAggregator aggregator = new MarketDataAggregator();
-//                Instrument instrument = aggregator.onPriceUpdate("AAPL", 10000003L, 149.0);
-//
-                public void run() {
-//                    System.out.println("KP : KPJavaStockPrice : instrument - id : " + instrument.id +
-//                            " timestamp : " + instrument.timestamp +
-//                            " price : " + instrument.price +
-//                            " LocalDateTime :  "  + LocalDateTime.now());
 
+                public void run() {
                     displayHandle4StockPriceAtFixedDelay.cancel(true);
                 } // Attempts to cancel execution of task beeperHandleArFixedDelay after one hour
             }, 60 * 60, TimeUnit.SECONDS);
