@@ -9,15 +9,66 @@ public class KPJavaInterview {
 
     public static void main(String[] args) {
 
-        // KP : Debug Print
+        //// KP : Debug Print
         KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
         System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
-        System.out.println("KP : KPMain - Interview : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Chase Interview : " + LocalDateTime.now());
+
+        /*KP : Chase Interview Question
+        ////KP : Chase Interview Question
+        //        Given a list of intervals [start, end], merge all overlapping intervals and return the result.
+        //
+        //        Example 1:
+        //        Input:  [[1,3], [2,6], [8,10], [15,18]]
+        //        Output: [[1,6], [8,10], [15,18]]
+        //        Example 2:
+        //        Input:  [[1,4], [4,5]]
+        //        Output: [[1,5]]
+        //
+        //        Signature:
+        //        public List<int[]> merge(List<int[]> intervals)
+        /*KP : Chase Interview Question*/
+
+        /// KP : Input:  [[1,4], [4,5]]
+        List<int[]> Input ;
+        int[] arr1 = {1, 4};
+        int[] arr2 = {4, 5};
+        Input = List.of( arr1, arr2);
+
+        /// KP : Input2:  [[1,3], [2,6], [8,10], [15,18]]
+        //Input = List.of( List.of(1,3), List.of(2,6), List.of(8,10), List.of(15,18) );
+        Input = List.of(new int[]{1, 3}, new int[]{2,6}, new int[]{8,10}, new int[]{15,18} );
+
+        int first =0, second = 0;
+        first = Input.get(0)[0];
+        second = Input.get(1)[1];
+
+        int firstOutput=0, secondOutput = 0;
+        firstOutput = first;
+        secondOutput = second;
+
+        List<int[]> firstList, secondList ;
+
+        for (int i = 0; i < Input.size() ; ++i) {
+
+            System.out.println( Arrays.toString(Input.get(i)));
+
+            if (first <= Input.get(i)[0])
+                firstOutput = first;
+
+            if ( Input.get(i)[1] >= second)
+                secondOutput = Input.get(i)[1];
+
+        }
+        System.out.println( "first : " + first + " second : " + second);
+        System.out.println( "firstOutput : " + firstOutput + " secondOutput : " + secondOutput);
+
+
 
         // KP : Debug Print
         KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
         System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
-        System.out.println("KP : KPMain - Interview : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Chase Interview : " + LocalDateTime.now());
 
         //        ////KP : Print fibonacci
         //        int[] Fibonassi = {1, 1, 2, 3,  5, 8, 13, 21};
@@ -61,6 +112,108 @@ public class KPJavaInterview {
 
     }
 
+
+    public static void main01(String[] args) {
+
+        //// KP : Debug Print
+        KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Chase Interview : " + LocalDateTime.now());
+
+        /*KP : Chase Interview Question
+        ////KP : Chase Interview Question
+        //        Given a list of intervals [start, end], merge all overlapping intervals and return the result.
+        //
+        //        Example 1:
+        //        Input:  [[1,3], [2,6], [8,10], [15,18]]
+        //        Output: [[1,6], [8,10], [15,18]]
+        //        Example 2:
+        //        Input:  [[1,4], [4,5]]
+        //        Output: [[1,5]]
+        //
+        //        Signature:
+        //        public List<int[]> merge(List<int[]> intervals)
+        /*KP : Chase Interview Question*/
+
+        /// KP : Input:  [[1,4], [4,5]]
+        List<int[]> Input ;
+        int[] arr1 = {1, 4};
+        int[] arr2 = {4, 5};
+        Input = List.of( arr1, arr2);
+
+        int first =0, second = 0;
+        first = Input.get(0)[0];
+        second = Input.get(1)[1];
+
+        int firstOutput=0, secondOutput = 0;
+        firstOutput = first;
+        secondOutput = second;
+
+        List<int[]> firstList, secondList ;
+
+        for (int i = 0; i < Input.size() ; ++i) {
+
+            System.out.println( Arrays.toString(Input.get(i)));
+
+            if (first <= Input.get(i)[0])
+                firstOutput = first;
+
+            if ( Input.get(i)[1] >= second)
+                secondOutput = Input.get(i)[1];
+
+
+            //System.out.println( "first : " + firstOutput + " second : " + secondOutput);
+
+        }
+        System.out.println( "first : " + first + " second : " + second);
+        System.out.println( "firstOutput : " + firstOutput + " secondOutput : " + secondOutput);
+
+        // KP : Debug Print
+        KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Chase Interview : " + LocalDateTime.now());
+
+        //        ////KP : Print fibonacci
+        //        int[] Fibonassi = {1, 1, 2, 3,  5, 8, 13, 21};
+        //        System.out.print("KP : KPMain - com.kpjavaspringboot : main() :  Fibonacci Series  = [ " );
+        //        int n = 20;
+        //        int  first=0, second = 1;
+        //        //double n = 1000;
+        //        //double  first= (double) 0, second = (double) 1;
+        //
+        //        for (int i = 1; i < n ; ++i) {
+        //
+        //            int next = first + second;
+        //            //double next = first + second;
+        //            first = second;
+        //            second = next;
+        //
+        //            //System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  first  = " + first + " second  = " + second + " next = " + next);
+        //            //System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  first  = " + first );
+        //            System.out.print(" " + first + ", ");
+        //
+        //        }
+        //        System.out.println( " ]" );
+
+
+        //        ///KP : Write program to get square of no -3,-2,-1,0,4,5,6 in sorted order
+        //        int[] Input = {-3, -2, -1, 0, 4, 5, 6};
+        //        int n = Input.length;
+        //
+        //        int[] Output = new int[n - 1];
+        //
+        //        System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  n = " + n);
+        //
+        //        for (int i = 0; i < n - 1; i++) {
+        //            int tmp = Input[i];
+        //            System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  tmp  = " + tmp + " (tmp * tmp) = " + (tmp * tmp) + " (int) (Math.pow(tmp, 2); " + (int) (Math.pow(tmp, 2)));
+        //            Output[i] = (tmp * tmp);
+        //        }
+        //
+        //        Arrays.sort(Output);
+        //        System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  Output = " + Arrays.toString(Output));
+
+    }
 
 
     public static void main00(String[] args) {
