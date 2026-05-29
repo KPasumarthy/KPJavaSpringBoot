@@ -12,7 +12,45 @@ public class KPJavaInterview {
         //// KP : Debug Print
         KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
         System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
-        System.out.println("KP : KPMain - Chase Interview : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Chase  Interview Jerill & Venkat : " + LocalDateTime.now());
+
+        /*KP : Chase Interview Question
+        ////KP : Chase Interview Question
+        *    Creare and Merge Two Phone Books
+        *       Contacts :: Even Number
+        *       Name : String : Jerill
+        *       Phone : String : +1.609.922.1234 or
+                                 +1.(425).633.1234
+         */
+
+        HashMap<String, String> hmPB1 = new HashMap<String, String>();
+        hmPB1.put("Jerill", "+1.609.922.9876");
+        hmPB1.put("Venkata", "+1.(201).123.4567");
+
+        HashMap<String, String> hmPB2 = new HashMap<String, String>();
+        hmPB2.put("Donald", "+1.732.922.1794");
+        hmPB2.put("Biden", "+1.425.179.4567");
+        hmPB2.put("Barrak", "14251794567");
+
+        //        System.out.println( "Phone Book 1 : " + Arrays.toString( hmPB1.entrySet().toArray()));
+        //        System.out.println( "Phone Book 2 : " + Arrays.toString( hmPB2.entrySet().toArray()));
+
+        for ( String i : hmPB2.keySet()){
+            ///System.out.println( "Phone Book 2 : Key : " + i  + " Value : "+ hmPB2.get(i));
+            hmPB1.put( i, hmPB2.get(i));
+        }
+        System.out.println("\n");
+
+        /// /KP : Merged Phone Book
+        for ( String i : hmPB1.keySet()){
+            System.out.println( "Merged Phone Book : Key : " + i  + " Value : "+ hmPB1.get(i));
+        }
+        System.out.println("\n");
+
+
+
+
+
 
         /*KP : Chase Interview Question
         ////KP : Chase Interview Question
@@ -29,41 +67,41 @@ public class KPJavaInterview {
         //        public List<int[]> merge(List<int[]> intervals)
         /*KP : Chase Interview Question*/
 
-        /// KP : Input:  [[1,4], [4,5]]
-        List<int[]> Input ;
-        int[] arr1 = {1, 4};
-        int[] arr2 = {4, 5};
-        Input = List.of( arr1, arr2);
-
-        /// KP : Input2:  [[1,3], [2,6], [8,10], [15,18]]
-        //Input = List.of( List.of(1,3), List.of(2,6), List.of(8,10), List.of(15,18) );
-        Input = List.of(new int[]{1, 3}, new int[]{2,6}, new int[]{8,10}, new int[]{15,18} );
-
-        int first =0, second = 0;
-        first = Input.get(0)[0];
-        second = Input.get(1)[1];
-
-        int firstOutput=0, secondOutput = 0;
-        firstOutput = first;
-        secondOutput = second;
-
-        List<int[]> firstList, secondList ;
-
-        for (int i = 0; i < Input.size() ; ++i) {
-
-            System.out.println( Arrays.toString(Input.get(i)));
-
-            if (first <= Input.get(i)[0])
-                firstOutput = first;
-
-            if ( Input.get(i)[1] >= second)
-                secondOutput = Input.get(i)[1];
-
-        }
-        System.out.println( "first : " + first + " second : " + second);
-        System.out.println( "firstOutput : " + firstOutput + " secondOutput : " + secondOutput);
-
-
+        //        /// KP : Input:  [[1,4], [4,5]]
+        //        List<int[]> Input ;
+        //        int[] arr1 = {1, 4};
+        //        int[] arr2 = {4, 5};
+        //        Input = List.of( arr1, arr2);
+        //
+        //        /// KP : Input2:  [[1,3], [2,6], [8,10], [15,18]]
+        //        //Input = List.of( List.of(1,3), List.of(2,6), List.of(8,10), List.of(15,18) );
+        //        Input = List.of(new int[]{1, 3}, new int[]{2,6}, new int[]{8,10}, new int[]{15,18} );
+        //
+        //        int first =0, second = 0;
+        //        first = Input.get(0)[0];
+        //        second = Input.get(1)[1];
+        //
+        //        int firstOutput=0, secondOutput = 0;
+        //        firstOutput = first;
+        //        secondOutput = second;
+        //
+        //        List<int[]> firstList, secondList ;
+        //
+        //        for (int i = 0; i < Input.size() ; ++i) {
+        //
+        //            System.out.println( Arrays.toString(Input.get(i)));
+        //
+        //            if (first <= Input.get(i)[0])
+        //                firstOutput = first;
+        //
+        //            if ( Input.get(i)[1] >= second)
+        //                secondOutput = Input.get(i)[1];
+        //
+        //        }
+        //        System.out.println( "first : " + first + " second : " + second);
+        //        System.out.println( "firstOutput : " + firstOutput + " secondOutput : " + secondOutput);
+        //
+        //
 
         // KP : Debug Print
         KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
