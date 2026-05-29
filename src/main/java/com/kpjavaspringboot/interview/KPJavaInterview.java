@@ -5,8 +5,6 @@ import java.util.*;
 
 public class KPJavaInterview {
 
-
-
     public static void main(String[] args) {
 
         //// KP : Debug Print
@@ -32,8 +30,8 @@ public class KPJavaInterview {
         hmPB2.put("Biden", "+1.425.179.4567");
         hmPB2.put("Barrak", "14251794567");
 
-        //        System.out.println( "Phone Book 1 : " + Arrays.toString( hmPB1.entrySet().toArray()));
-        //        System.out.println( "Phone Book 2 : " + Arrays.toString( hmPB2.entrySet().toArray()));
+        ////        System.out.println( "Phone Book 1 : " + Arrays.toString( hmPB1.entrySet().toArray()));
+        ////        System.out.println( "Phone Book 2 : " + Arrays.toString( hmPB2.entrySet().toArray()));
 
         for ( String i : hmPB2.keySet()){
             ///System.out.println( "Phone Book 2 : Key : " + i  + " Value : "+ hmPB2.get(i));
@@ -46,11 +44,6 @@ public class KPJavaInterview {
             System.out.println( "Merged Phone Book : Key : " + i  + " Value : "+ hmPB1.get(i));
         }
         System.out.println("\n");
-
-
-
-
-
 
         /*KP : Chase Interview Question
         ////KP : Chase Interview Question
