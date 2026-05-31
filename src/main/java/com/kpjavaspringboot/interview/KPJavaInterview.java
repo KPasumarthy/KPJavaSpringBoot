@@ -7,7 +7,131 @@ import java.util.regex.Pattern;
 
 public class KPJavaInterview {
 
+
     public static void main(String[] args) {
+
+        //// KP : Debug Print
+        KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
+        System.out.println();
+        System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Chase  Interview Jerill & Venkat : " + LocalDateTime.now());
+
+
+
+
+        // KP : Debug Print
+        KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
+        System.out.println();
+        System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Chase Interview : " + LocalDateTime.now());
+
+        //        /*KP : Chase Interview Question
+        //        ////KP : Chase Interview Question
+        //        *    Creare and Merge Two Phone Books
+        //        *       Contacts :: Even Number
+        //        *       Name : String : Jerill
+        //        *       Phone : String : +1.609.922.1234 or
+        //                                 +1.(425).633.1234
+        //         */
+        //
+        //        HashMap<String, String> hmPB1 = new HashMap<String, String>();
+        //        hmPB1.put("Jerill", "+1.609.922.9876");
+        //        hmPB1.put("Venkata", "+1.(201).123.4567");
+        //
+        //        HashMap<String, String> hmPB2 = new HashMap<String, String>();
+        //        hmPB2.put("Donald", "+1.732.922.1794");
+        //        hmPB2.put("Biden", "+1.425.179.4567");
+        //        hmPB2.put("Barrak", "14251794567");
+        //
+        //        ////        System.out.println( "Phone Book 1 : " + Arrays.toString( hmPB1.entrySet().toArray()));
+        //        ////        System.out.println( "Phone Book 2 : " + Arrays.toString( hmPB2.entrySet().toArray()));
+        //
+        //        for ( String i : hmPB2.keySet()){
+        //            ///System.out.println( "Phone Book 2 : Key : " + i  + " Value : "+ hmPB2.get(i));
+        //            hmPB1.put( i, hmPB2.get(i));
+        //        }
+        //        System.out.println("\n");
+        //
+        //        /// /KP : Merged Phone Book
+        //        for ( String i : hmPB1.keySet()){
+        //            System.out.println( "Merged Phone Book : Key : " + i  + " Value : "+ hmPB1.get(i));
+        //        }
+        //        System.out.println("\n");
+        //
+        //
+        //        /// /KP : Convert Phone Number inside the Book into a Number irrespective of format using RegEx
+        //        HashMap<String, Long> hmPB = new HashMap<String, Long>();
+        //        for ( String i : hmPB1.keySet()){
+        //
+        //            System.out.println("\n");
+        //
+        //            String input = hmPB1.get(i);
+        //
+        //            // Replace everything that is NOT a digit [^0-9] with an empty string
+        //            String clean = input.replaceAll("[^0-9]", "");
+        //            System.out.println("Clean String : " + clean); // Output: 456
+        //
+        //            //int number = Integer.parseInt(clean.trim()); // Returns 8923
+        //            long number = Long.parseLong(clean.trim()); // Returns 8923
+        //            System.out.println("Clean Number: " + number); // Output: 456
+        //
+        //            hmPB.put( i, number);
+        //            System.out.println( "Merged & Formatted Phone Book : Key : " + i  + " Value : "+ hmPB.get(i));
+        //        }
+        //
+        //
+        //        /// Merged & RegEx Formatted Phone Book
+        //        for ( String i : hmPB.keySet()){
+        //            System.out.println( "Merged & RegEx Formatted Phone Book : Key : " + i  + " Value : "+ hmPB.get(i));
+        //        }
+        //        System.out.println("\n");
+
+
+        //        ////KP : Print fibonacci
+        //        int[] Fibonassi = {1, 1, 2, 3,  5, 8, 13, 21};
+        //        System.out.print("KP : KPMain - com.kpjavaspringboot : main() :  Fibonacci Series  = [ " );
+        //        int n = 20;
+        //        int  first=0, second = 1;
+        //        //double n = 1000;
+        //        //double  first= (double) 0, second = (double) 1;
+        //
+        //        for (int i = 1; i < n ; ++i) {
+        //
+        //            int next = first + second;
+        //            //double next = first + second;
+        //            first = second;
+        //            second = next;
+        //
+        //            //System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  first  = " + first + " second  = " + second + " next = " + next);
+        //            //System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  first  = " + first );
+        //            System.out.print(" " + first + ", ");
+        //
+        //        }
+        //        System.out.println( " ]" );
+
+
+        //        ///KP : Write program to get square of no -3,-2,-1,0,4,5,6 in sorted order
+        //        int[] Input = {-3, -2, -1, 0, 4, 5, 6};
+        //        int n = Input.length;
+        //
+        //        int[] Output = new int[n - 1];
+        //
+        //        System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  n = " + n);
+        //
+        //        for (int i = 0; i < n - 1; i++) {
+        //            int tmp = Input[i];
+        //            System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  tmp  = " + tmp + " (tmp * tmp) = " + (tmp * tmp) + " (int) (Math.pow(tmp, 2); " + (int) (Math.pow(tmp, 2)));
+        //            Output[i] = (tmp * tmp);
+        //        }
+        //
+        //        Arrays.sort(Output);
+        //        System.out.println("KP : KPMain - com.kpjavaspringboot : main() :  Output = " + Arrays.toString(Output));
+
+    }
+
+
+
+    public static void main02(String[] args) {
 
         //// KP : Debug Print
         KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
