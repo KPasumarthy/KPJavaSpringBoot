@@ -14,7 +14,7 @@ public class KPJavaInterview {
         KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
         System.out.println();
         System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
-        System.out.println("KP : KPMain - Chase  Interview Jerill & Venkat : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Interview : : " + LocalDateTime.now());
 
 
 
@@ -23,7 +23,7 @@ public class KPJavaInterview {
         KPMain.logger.info("KP : KPJavaSpringBootApplication : main() : " + LocalDateTime.now());
         System.out.println();
         System.out.println("KP : KPMain - com.kpjavaspringboot : main() : " + LocalDateTime.now());
-        System.out.println("KP : KPMain - Chase Interview : " + LocalDateTime.now());
+        System.out.println("KP : KPMain - Interview : : " + LocalDateTime.now());
 
         //        /*KP : Chase Interview Question
         //        ////KP : Chase Interview Question
