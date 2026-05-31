@@ -2,6 +2,8 @@ package com.kpjavaspringboot.interview;
 
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class KPJavaInterview {
 
@@ -44,6 +46,35 @@ public class KPJavaInterview {
             System.out.println( "Merged Phone Book : Key : " + i  + " Value : "+ hmPB1.get(i));
         }
         System.out.println("\n");
+
+
+        /// /KP : Convert Phone Number inside the Book into a Number irrespective of format using RegEx
+        HashMap<String, Long> hmPB = new HashMap<String, Long>();
+        for ( String i : hmPB1.keySet()){
+
+            System.out.println("\n");
+
+            String input = hmPB1.get(i);
+
+            // Replace everything that is NOT a digit [^0-9] with an empty string
+            String clean = input.replaceAll("[^0-9]", "");
+            System.out.println("Clean String : " + clean); // Output: 456
+
+            //int number = Integer.parseInt(clean.trim()); // Returns 8923
+            long number = Long.parseLong(clean.trim()); // Returns 8923
+            System.out.println("Clean Number: " + number); // Output: 456
+
+            hmPB.put( i, number);
+            System.out.println( "Merged & Formatted Phone Book : Key : " + i  + " Value : "+ hmPB.get(i));
+        }
+
+
+        /// Merged & RegEx Formatted Phone Book
+        for ( String i : hmPB.keySet()){
+            System.out.println( "Merged & RegEx Formatted Phone Book : Key : " + i  + " Value : "+ hmPB.get(i));
+        }
+        System.out.println("\n");
+
 
         /*KP : Chase Interview Question
         ////KP : Chase Interview Question
